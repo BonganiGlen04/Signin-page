@@ -6,9 +6,11 @@
 }
 
 :root {
-    --bkgrnd-color-light: #4B5563:
+    --bkgrnd-color-light: #f7f7f7;
     --btn-color: #596D48;
     --input-border-color: #E5E7EB;
+    --ff: "Norse Bold";
+    --ff-second: "Roboto", sans-serif;
 }
 
 *,
@@ -18,60 +20,144 @@
 }
 
 * {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--ff-second);
     margin: 0;
     padding:0;
 }
 
-/* body {
+body {
     display: flex;
-} */
-
-/* body {
-
+    background-color: var(--bkgrnd-color-light);
 }
-
 .left-section {
     position: relative;
-    overflow: hidden;
 }
 
 .left-section > img {
     height: 100vh;
-    max-width: auto;
-}
-
-.image-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    font-size: 12px;
-    padding: 2rem 12.5rem;
-    position: absolute;
-    top: 180px;
-    right:0;
-    left: 0;
-    opacity: 0.7;
+    width: auto;
 }
 
 .site-name {
-    font-family: "Norse Bold";
-    font-size:xx-large;
+    font-family: var(--ff);
     color: white;
-    font-size: 7em;
+    font-size: 5em;
 }
 
-.right-section {
+.image-text {
+    position: absolute;
+    top: 192px;
+    opacity: 0.7;
+    padding: 16px 264px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: white;
 }
 
-.text {
-    padding: 3em 2em;
+a {
+    text-decoration-line: none;
+    color: #fafafa;
+}
+
+.credits {
+    position: absolute;
+    bottom: 2em;
+    color: #fafafa; 
+    left: 200px;
+}
+
+.right-section p {
     font-size: 2rem;
     font-weight: 700;
+    padding: 3em 2em 2em 2em;
+    line-height: 1.2;
+}
+
+.formlayout {
+    background-color: white;
+    padding: 1em 0 2em 4em;
+    box-shadow: 0px 10px 10px -10px #000000;
+}
+
+.card-header {
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-bottom: .8em;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: .8;
+    gap: 5em;
+    margin-bottom: 1.5em;
+}
+.row div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2px;
+}
+
+.row div label {
+    opacity: 0.8;
+}
+
+input {
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 2.2em;
+    width: 20em;
+    border-radius: .4em;
+    border:1px solid var(--input-border-color);
+    padding: .2em 1em;
+}
+
+input[type="password"]:valid {
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 2.2em;
+    width: 20em;
+    border-radius: .4em;
+    border:1px solid blue;
+    padding: .2em 1em;
+}
+
+button {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 1em 2em;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: .5em;
+    border-style: none;
+    margin: 2em 0 1em 4em;
+    box-shadow: 0px 10px 13px -7px #000000;
 }
 
 
-.card {
-    background-color: White;
-} */
+button:hover {
+
+    cursor: pointer;
+}
+.account-text {
+    margin: 1em 0 1em 4em;
+    font-weight: 600;
+}
+
+.account-text a {
+    color: var(--btn-color);
+    font-weight: 600;
+}
+
+.account-text a:hover {
+    text-decoration-line:underline ;
+}
